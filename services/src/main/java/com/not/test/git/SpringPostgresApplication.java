@@ -4,10 +4,10 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class NotTestGitApplication {
+public class SpringPostgresApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(NotTestGitApplication.class, args);
+		SpringApplication.run(SpringPostgresApplication.class, args);
 	}
 
 }
