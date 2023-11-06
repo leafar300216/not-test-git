@@ -36,7 +36,7 @@ jobs:
         image: leafar300216/not-test-app
         tags: v1.0.1, latest
         registry: docker.io
-        dockerfile: Dockerfile.ci
+        dockerfile: Dockerfile
         username: ${{ secrets.DOCKER_USR }}
         password: ${{ secrets.DOCKER_PSW }}
 
