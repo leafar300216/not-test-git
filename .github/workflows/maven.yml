@@ -42,7 +42,7 @@ jobs:
 
   deploy:
     needs: build
-    runs-on: [ec2-not-test]
+    runs-on: self-hosted
     steps:
       - name: pull image from docker
         run: docker pull leafar300216/not-test-app:latest
