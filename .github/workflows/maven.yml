@@ -45,9 +45,9 @@ jobs:
     runs-on: self-hosted
     steps:
       - name: pull image from docker
-        run: docker pull leafar300216/not-test-app:latest
+        run: sudo docker pull leafar300216/not-test-app:latest
       - name: delete old docker container
-        run: docker rm -f not-test-container
+        run: sudo docker rm -f not-test-container
       - name: run image from docker
-        run: docker run -d -p 8080:8080 --name not-test-container leafar300216/not-test-ap
+        run: sudo docker run -d -p 8080:8080 --name not-test-container leafar300216/not-test-ap
 
