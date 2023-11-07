@@ -32,13 +32,13 @@ jobs:
       uses: mr-smithers-excellent/docker-build-push@v6
       with:
         image: leafar300216/not-test-app
-        tags: v1.0.1, latest
+        tags: latest
         registry: docker.io
         dockerfile: Dockerfile
         username: ${{ secrets.DOCKER_USR }}
         password: ${{ secrets.DOCKER_PSW }}
   Deploy:
-    needs: Docker
+    needs: BuildAndDocker
     runs-on: self-hosted
     steps:
       - name: pull image from docker
