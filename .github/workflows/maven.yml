@@ -16,10 +16,8 @@ on:
   workflow_dispatch:
 
 jobs:
-  build:
-
+  BuildAndDocker:
     runs-on: ubuntu-latest
-
     steps:
     - uses: actions/checkout@v3
     - name: Set up JDK 17
@@ -39,9 +37,8 @@ jobs:
         dockerfile: Dockerfile
         username: ${{ secrets.DOCKER_USR }}
         password: ${{ secrets.DOCKER_PSW }}
-
-  deploy:
-    needs: build
+  Deploy:
+    needs: Docker
     runs-on: self-hosted
     steps:
       - name: pull image from docker
