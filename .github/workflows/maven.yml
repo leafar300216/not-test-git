@@ -40,3 +40,14 @@ jobs:
         username: ${{ secrets.DOCKER_USR }}
         password: ${{ secrets.DOCKER_PSW }}
 
+  deploy:
+    needs: build
+    runs-on: [ec2-not-test]
+    steps:
+      - name: pull image from docker
+        run: docker pull leafar300216/not-test-app:latest
+      - name: delete old docker container
+        run: docker rm -f not-test-container
+      - name: run image from docker
+        run: docker run -d -p 8080:8080 --name not-test-container leafar300216/not-test-ap
+
