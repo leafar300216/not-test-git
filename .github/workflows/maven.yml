@@ -37,7 +37,7 @@ jobs:
         dockerfile: Dockerfile
         username: ${{ secrets.DOCKER_USR }}
         password: ${{ secrets.DOCKER_PSW }}
-  Deploy:
+  DeployToEc2:
     needs: BuildAndDocker
     runs-on: self-hosted
     steps:
