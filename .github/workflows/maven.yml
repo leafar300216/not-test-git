@@ -49,5 +49,5 @@ jobs:
       - name: delete old docker container
         run: sudo docker rm -f not-test-container
       - name: run image from docker
-        run: sudo docker run -d -p 8080:8080 --name not-test-container leafar300216/not-test-ap
+        run: sudo docker run -d -p 8080:8080 --name not-test-container leafar300216/not-test-app
 
